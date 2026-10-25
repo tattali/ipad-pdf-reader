@@ -1,0 +1,122 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #111;
+  color: #eee;
+  font: 17px/1.4 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[hidden] { display: none !important; }
+
+#stage {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  overflow: hidden;
+}
+
+#pages {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#pages canvas {
+  display: block;
+  background: #fff;
+}
+
+#welcome {
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 20vh 1.5em 0;
+  text-align: center;
+}
+
+#welcome h1 { font-size: 1.6em; margin: 0 0 .6em; }
+#welcome p { color: #ccc; }
+
+#bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  padding: 10px;
+  background: rgba(30, 30, 30, .96);
+  border-top: 1px solid #333;
+}
+
+#bar.away { display: none; }
+
+#file {
+  position: absolute;
+  width: 1px; height: 1px;
+  opacity: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 4px 6px 4px 0;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #3a3a3c;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+#cover[aria-pressed="true"] { background: #0a63c9; }
+#update { background: #1d7a35; }
+
+#where {
+  float: right;
+  padding: 14px 6px;
+  color: #ccc;
+}
+
+#list {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, .7);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#list-box {
+  max-width: 30em;
+  margin: 8vh auto;
+  padding: 1em 1.5em;
+  background: #222;
+  border-radius: 12px;
+}
+
+#list-box h2 { margin-top: 0; font-size: 1.2em; }
+#list-items { list-style: none; margin: 0 0 1em; padding: 0; }
+
+#list-items button {
+  width: 100%;
+  padding: 12px 4px;
+  border: 0;
+  border-bottom: 1px solid #333;
+  background: none;
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+#message {
+  position: fixed;
+  top: 40%;
+  left: 10%; right: 10%;
+  margin: 0;
+  padding: 1em;
+  background: #2b2b2e;
+  border-radius: 12px;
+  text-align: center;
+}

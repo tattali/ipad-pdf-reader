@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" manifest="app.appcache">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Read PDFs two pages side by side on an old iPad, offline.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="PDF Reader">
+<meta name="theme-color" content="#111111">
+<title>PDF Reader</title>
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main id="stage">
+  <div id="pages" aria-live="polite"></div>
+  <div id="welcome">
+    <h1>PDF Reader</h1>
+    <p>Open a PDF. Hold the iPad sideways to see two pages side by side.</p>
+    <p>Tap the right edge or swipe left for the next pages. Tap the middle to show the menu.</p>
+  </div>
+</main>
+<nav id="bar">
+  <label class="btn" for="file">Open PDF</label>
+  <input type="file" id="file">
+  <button type="button" class="btn" id="mac" hidden>From the Mac</button>
+  <button type="button" class="btn" id="cover" aria-pressed="true">Cover alone: on</button>
+  <button type="button" class="btn" id="update" hidden>Update ready</button>
+  <span id="where"></span>
+</nav>
+<div id="list" hidden>
+  <div id="list-box">
+    <h2>PDFs on the Mac</h2>
+    <ul id="list-items"></ul>
+    <button type="button" class="btn" id="list-close">Close</button>
+  </div>
+</div>
+<p id="message" role="status" hidden></p>
+<script src="js/spreads.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
