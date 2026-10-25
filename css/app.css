@@ -67,7 +67,14 @@ html, body {
   background: #3a3a3c;
   color: #fff;
   font: inherit;
+  vertical-align: middle;
   cursor: pointer;
+}
+
+#cover-hint {
+  display: block;
+  font-size: 13px;
+  color: #e8f0fa;
 }
 
 #cover[aria-pressed="true"] { background: #0a63c9; }
