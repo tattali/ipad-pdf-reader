@@ -1,6 +1,6 @@
 CACHE MANIFEST
 # Change the version line to make installed iPads fetch the new files.
-# version 2
+# version 3
 
 index.html
 css/app.css

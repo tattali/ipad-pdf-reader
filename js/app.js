@@ -13,6 +13,8 @@
   var fileInput = document.getElementById('file');
   var macButton = document.getElementById('mac');
   var coverButton = document.getElementById('cover');
+  var coverState = document.getElementById('cover-state');
+  var coverHint = document.getElementById('cover-hint');
   var updateButton = document.getElementById('update');
   var where = document.getElementById('where');
   var list = document.getElementById('list');
@@ -87,7 +89,8 @@
 
   function showCover() {
     coverButton.setAttribute('aria-pressed', String(coverAlone));
-    coverButton.textContent = 'Cover alone: ' + (coverAlone ? 'on' : 'off');
+    coverState.textContent = 'Cover alone: ' + (coverAlone ? 'on' : 'off');
+    coverHint.textContent = coverAlone ? 'Page 1 alone, then 2–3, 4–5…' : 'Pages in pairs: 1–2, 3–4…';
   }
 
   function remember() {
