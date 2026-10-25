@@ -309,9 +309,12 @@
     list.hidden = true;
   });
 
-  get('pdfs.json', 'text', function (text) {
-    macButton.hidden = !text || text.charAt(0) !== '[';
-  });
+  // Only the Mac copy (plain http on the home network) has a PDF list.
+  if (window.location.protocol === 'http:') {
+    get('pdfs.json', 'text', function (text) {
+      macButton.hidden = !text || text.charAt(0) !== '[';
+    });
+  }
 
   // Tap zones and swipes. Pinch zoom stays free, and swipes pause while zoomed.
   function zoomed() {
